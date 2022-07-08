@@ -1313,7 +1313,7 @@ XXR_common:
 			 * SEC]] [ENDSTATE end_state] */
 			/* RUNTEST [run_state] min_time SEC [MAXIMUM max_time SEC] [ENDSTATE
 			 * end_state] */
-			if ((num_of_argu < 3) && (num_of_argu > 11)) {
+			if ((num_of_argu < 3) || (num_of_argu > 11)) {
 				LOG_ERROR("invalid parameter of %s", argus[0]);
 				return ERROR_FAIL;
 			}

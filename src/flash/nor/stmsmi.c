@@ -41,9 +41,8 @@
 #include <jtag/jtag.h>
 #include <helper/time_support.h>
 
-#define SMI_READ_REG(a) (_SMI_READ_REG(a))
-#define _SMI_READ_REG(a)			\
-{									\
+#define SMI_READ_REG(a)			\
+({									\
 	int __a;						\
 	uint32_t __v;					\
 									\
@@ -51,7 +50,7 @@
 	if (__a != ERROR_OK)			\
 		return __a;					\
 	__v;							\
-}
+})
 
 #define SMI_WRITE_REG(a, v)			\
 {									\
