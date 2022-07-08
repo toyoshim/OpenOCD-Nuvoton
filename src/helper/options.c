@@ -33,7 +33,7 @@
 #define HAVE_REALPATH
 #endif
 
-#ifdef IS_DARWIN
+#ifdef __APPLE__
 #include <libproc.h>
 #include <sys/proc_info.h>
 #endif
